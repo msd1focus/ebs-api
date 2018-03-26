@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "FCS_OM_WO_INV_DETAIL_V", schema= "APPS")
+@Table(name = "FCS_OM_WO_INV_V", schema= "APPS")
 public class InvDetail {
 
 	@Id
@@ -22,14 +22,6 @@ public class InvDetail {
 	private String accountNumber;
 	@Column(name="ACCOUNT_NAME")
 	private String accountName;
-	@Column(name="PARTY_NAME")
-	private String partyName;
-	@Column(name="ACCOUNT_NUMBER_SHIP")
-	private String accountNumberShip;
-	@Column(name="PARTY_NAME_SHIP")
-	private String partyNameShip;
-	@Column(name="PARTY_ACCOUNT_NAME")
-	private String partyAccountName;
 	@Column(name="CUSTOMER_TRX_ID")
 	private Long customerTrxId;
 	@Column(name="CUSTOMER_TRX_LINE_ID")
@@ -40,8 +32,8 @@ public class InvDetail {
 	private String trxDate;
 	@Column(name="ORDER_NUMBER")
 	private Long orderNumber;
-	@Column(name="ORDERED_DATE")
-	private String orderedDate;
+	@Column(name="ORDER_DATE")
+	private String orderDate;
 	@Column(name="CUST_PO_NUMBER")
 	private String custPoNumber;
 	@Column(name="REQUEST_DATE")
@@ -56,7 +48,7 @@ public class InvDetail {
 	private Long inventoryItemId;
 	@Column(name="ITEM_CODE")
 	private String itemCode;
-	@Column(name="ITEM_DESCP")
+	@Column(name="ITEM_DESC")
 	private String itemDesc;
 	@Column(name="QUANTITY_INVOICED")
 	private Long quantityInvoiced;
@@ -64,8 +56,6 @@ public class InvDetail {
 	private String uomCode;
 	@Column(name="INVOICE_CURRENCY_CODE")
 	private String invoiceCurrencyCode;
-	@Column(name="INVOICE_CURRENCY_CODE1")
-	private String invoiceCurrencyCode1;
 	@Column(name="UNIT_SELLING_PRICE")
 	private Double unitSellingPrice;
 	@Column(name="DISKON1")
@@ -112,16 +102,12 @@ public class InvDetail {
 			Long custAccountId,
 			String accountNumber,
 			String accountName,
-			String partyName,
-			String accountNumberShip,
-			String partyNameShip,
-			String partyAccountName,
 			Long customerTrxId,
 			Long customerTrxLineId,
 			String trxNumber,
 			String trxDate,
 			Long orderNumber,
-			String orderedDate,
+			String orderDate,
 			String custPoNumber,
 			String requestDate,
 			String paymentTerm,
@@ -133,7 +119,6 @@ public class InvDetail {
 			Long quantityInvoiced,
 			String uomCode,
 			String invoiceCurrencyCode,
-			String invoiceCurrencyCode1,
 			Double unitSellingPrice,
 			Double diskon1,
 			Double diskon2,
@@ -158,16 +143,12 @@ public class InvDetail {
 		this.custAccountId = custAccountId;
 		this.accountNumber = accountNumber;
 		this.accountName = accountName;
-		this.partyName = partyName;
-		this.accountNumberShip = accountNumberShip;
-		this.partyNameShip = partyNameShip;
-		this.partyAccountName = partyAccountName;
 		this.customerTrxId = customerTrxId;
 		this.customerTrxLineId = customerTrxLineId;
 		this.trxNumber = trxNumber;
 		this.trxDate = trxDate;
 		this.orderNumber = orderNumber;
-		this.orderedDate = orderedDate;
+		this.orderDate = orderDate;
 		this.custPoNumber = custPoNumber;
 		this.requestDate = requestDate;
 		this.paymentTerm = paymentTerm;
@@ -179,7 +160,6 @@ public class InvDetail {
 		this.quantityInvoiced = quantityInvoiced;
 		this.uomCode = uomCode;
 		this.invoiceCurrencyCode = invoiceCurrencyCode;
-		this.invoiceCurrencyCode1 = invoiceCurrencyCode1;
 		this.unitSellingPrice = unitSellingPrice;
 		this.diskon1 = diskon1;
 		this.diskon2 = diskon2;
@@ -247,38 +227,6 @@ public class InvDetail {
 		this.accountName = accountName;
 	}
 
-	public String getPartyName() {
-		return partyName;
-	}
-
-	public void setPartyName(String partyName) {
-		this.partyName = partyName;
-	}
-
-	public String getAccountNumberShip() {
-		return accountNumberShip;
-	}
-
-	public void setAccountNumberShip(String accountNumberShip) {
-		this.accountNumberShip = accountNumberShip;
-	}
-
-	public String getPartyNameShip() {
-		return partyNameShip;
-	}
-
-	public void setPartyNameShip(String partyNameShip) {
-		this.partyNameShip = partyNameShip;
-	}
-
-	public String getPartyAccountName() {
-		return partyAccountName;
-	}
-
-	public void setPartyAccountName(String partyAccountName) {
-		this.partyAccountName = partyAccountName;
-	}
-
 	public Long getCustomerTrxId() {
 		return customerTrxId;
 	}
@@ -319,12 +267,12 @@ public class InvDetail {
 		this.orderNumber = orderNumber;
 	}
 
-	public String getOrderedDate() {
-		return orderedDate;
+	public String getOrderDate() {
+		return orderDate;
 	}
 
-	public void setOrderedDate(String orderedDate) {
-		this.orderedDate = orderedDate;
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public String getCustPoNumber() {
@@ -413,14 +361,6 @@ public class InvDetail {
 
 	public void setInvoiceCurrencyCode(String invoiceCurrencyCode) {
 		this.invoiceCurrencyCode = invoiceCurrencyCode;
-	}
-
-	public String getInvoiceCurrencyCode1() {
-		return invoiceCurrencyCode1;
-	}
-
-	public void setInvoiceCurrencyCode1(String invoiceCurrencyCode1) {
-		this.invoiceCurrencyCode1 = invoiceCurrencyCode1;
 	}
 
 	public Double getUnitSellingPrice() {

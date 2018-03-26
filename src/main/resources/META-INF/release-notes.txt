@@ -1,0 +1,9 @@
+Version 0.0.1-SNAPSHOT (Monday, 19 March 2018 by Amin Mutohar)
+ - Initial deployment
+  
+Version 0.1.0 (Tuesday, 20 March 2018 by Amin Mutohar)
+ - Change view invoice detail from FCS_OM_WO_INV_DETAIL_V
+ 	to FCS_OM_WO_INV_V
+ 	 	
+Version 1.0.0-RELEASE (Wednesday, 21 March 2018 by Amin Mutohar)
+ - Initial release production
