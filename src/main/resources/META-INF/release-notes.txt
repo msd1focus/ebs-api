@@ -12,3 +12,7 @@ Version 1.0.0-RELEASE (Wednesday, 21 March 2018 by Amin Mutohar)
  Version 1.1.0 (Tuesday, 26 March 2018 by Amin Mutohar)
  - Change Application
  	1. Add credit limit service
+ 	
+ Version 1.2.0 (Monday, 9 April 2018 by Amin Mutohar)
+ - Change Application
+ 	1. Add non web order invoice service
