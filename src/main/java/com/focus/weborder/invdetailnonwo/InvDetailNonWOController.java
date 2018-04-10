@@ -27,7 +27,7 @@ public class InvDetailNonWOController {
 	
 	@RequestMapping("/invdetailnonwo/custid")
 	public List<InvDetailNonWO> getByCustid(
-			@RequestParam String custid){
+			@RequestParam Long custid){
 		return invDetailNonWOService.getByCustid(custid);
 	}
 

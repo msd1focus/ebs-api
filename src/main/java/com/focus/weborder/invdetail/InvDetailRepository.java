@@ -20,4 +20,12 @@ public interface InvDetailRepository
 	List<InvDetail> getByTrxNumber(
 			@Param("trxNumber") String trxNumber
     	);
+
+	@Query("SELECT id FROM InvDetail id WHERE "
+            + "id.customerTrxId = :customerTrxId "
+            + "ORDER BY id.lineNumber ASC"
+           )
+	List<InvDetail> getByCustomertrxid(
+			@Param("customerTrxId") Long customerTrxId
+    	);
 }

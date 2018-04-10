@@ -24,4 +24,10 @@ public class InvDetailController {
 			@RequestParam String trxnumber){
 		return invDetailService.getByTrxNumber(trxnumber);
 	}
+	
+	@RequestMapping("/invdetail/customertrxid")
+	public List<InvDetail> getByCustomertrxid(
+			@RequestParam Long customertrxid){
+		return invDetailService.getByCustomertrxid(customertrxid);
+	}
 }

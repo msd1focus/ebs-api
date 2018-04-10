@@ -21,5 +21,11 @@ public class InvDetailService {
 		return invDetailRepository.getByTrxNumber(
 					trxNumber);
 	}
+	
+	public List<InvDetail> getByCustomertrxid(
+			Long customerTrxId){
+		return invDetailRepository.getByCustomertrxid(
+				customerTrxId);
+	}
 
 }

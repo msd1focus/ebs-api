@@ -26,6 +26,6 @@ public interface InvDetailNonWORepository
             + "ORDER BY id.trxDate DESC"
            )
 	List<InvDetailNonWO> getByCustid(
-			@Param("custId") String custId
+			@Param("custId") Long custId
     	);
 }

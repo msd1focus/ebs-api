@@ -23,7 +23,7 @@ public class InvDetailNonWOService {
 	}
 	
 	public List<InvDetailNonWO> getByCustid(
-			String custId){
+			Long custId){
 		return invDetailNonWORepository.getByCustid(
 				custId);
 	}
