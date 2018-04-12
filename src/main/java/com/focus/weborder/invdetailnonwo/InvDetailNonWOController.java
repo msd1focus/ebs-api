@@ -1,5 +1,6 @@
 package com.focus.weborder.invdetailnonwo;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,18 @@ public class InvDetailNonWOController {
 	public List<InvDetailNonWO> getByCustid(
 			@RequestParam Long custid){
 		return invDetailNonWOService.getByCustid(custid);
+	}
+	
+	@RequestMapping("/invdetailnonwo/custidstartenddate")
+	public List<InvDetailNonWO> getByCustidStartEnddate(
+				@RequestParam Long custid,
+				@RequestParam Date startdate,
+				@RequestParam Date enddate
+			){
+		return invDetailNonWOService.getByCustidStartEnddate(
+				custid,
+				startdate,
+				enddate);
 	}
 
 }
