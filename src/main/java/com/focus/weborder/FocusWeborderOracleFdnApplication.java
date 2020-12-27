@@ -7,7 +7,8 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class FocusWeborderOracleFdnApplication 
-	extends SpringBootServletInitializer{
+	extends SpringBootServletInitializer
+	{
 
 	public static void main(String[] args) {
 		SpringApplication.run(FocusWeborderOracleFdnApplication.class, args);

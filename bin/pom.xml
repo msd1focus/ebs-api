@@ -5,7 +5,7 @@
 
 	<groupId>com.focus.weborder.services</groupId>
 	<artifactId>focus-weborder-oracle-fdn</artifactId>
-	<version>2.0.0</version>
+	<version>1.4.0</version>
 	<packaging>war</packaging>
 
 	<name>focus-weborder-oracle-fdn</name>
@@ -30,20 +30,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
- 			<exclusions>
+			<exclusions>
                 <exclusion>
                     <groupId>org.apache.tomcat</groupId>
                     <artifactId>tomcat-jdbc</artifactId>
                 </exclusion>
-            </exclusions> 
+            </exclusions>
 		</dependency>
 		
 		<!-- Oracle JDBC driver -->
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>12.1.0.2</version>     
-		</dependency>
+        <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc7</artifactId>
+        <version>12.1.0.2</version>     
+    	</dependency>
 
         <!-- HikariCP connection pool -->
         <dependency>

@@ -25,7 +25,3 @@ Version 1.4.0 (Thursday, 12 April 2018 by Amin Mutohar)
  - Change Application
  	1. Add get invoice detail non wo by custId, start, and end trx date
  	
-Version 2.0.0 (Sunday, 27 Dec 2020 by Frans Mazhar)
-- Change Application
-	1. Remove duplicate package on service. invdetail and invoiceall
-	2. Add OutstandingOrder package	
