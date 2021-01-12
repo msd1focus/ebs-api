@@ -2,6 +2,7 @@ package com.focus.weborder.outstdorder;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,15 +17,15 @@ public class OutstdOrder {
 	private String orderSource;
 	@Column(name="ORDER#")
 	private Long	orderNo;
-	private LocalDate orderDate;
-	private LocalDate priceDate;
-	private LocalDate requestDate;
+	private Date orderDate;
+	private Date priceDate;
+	private Date requestDate;
 	private String shippingDate;
 	@Column(name="REF_ORDER#")
 	private Long	refOrderNo;
 	@Column(name="QUOTE#")
 	private Long	quoteNo;
-	private LocalDate quoteDate;
+	private Date quoteDate;
 	private String orderNote;
 	@Column(name="CUSTPO#")
 	private String custpoNo;
@@ -109,22 +110,22 @@ public class OutstdOrder {
 	public void setOrderNo(Long orderNo) {
 		this.orderNo = orderNo;
 	}
-	public LocalDate getOrderDate() {
+	public Date getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(LocalDate orderDate) {
+	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-	public LocalDate getPriceDate() {
+	public Date getPriceDate() {
 		return priceDate;
 	}
-	public void setPriceDate(LocalDate priceDate) {
+	public void setPriceDate(Date priceDate) {
 		this.priceDate = priceDate;
 	}
-	public LocalDate getRequestDate() {
+	public Date getRequestDate() {
 		return requestDate;
 	}
-	public void setRequestDate(LocalDate requestDate) {
+	public void setRequestDate(Date requestDate) {
 		this.requestDate = requestDate;
 	}
 	public String getShippingDate() {
@@ -145,10 +146,10 @@ public class OutstdOrder {
 	public void setQuoteNo(Long quoteNo) {
 		this.quoteNo = quoteNo;
 	}
-	public LocalDate getQuoteDate() {
+	public Date getQuoteDate() {
 		return quoteDate;
 	}
-	public void setQuoteDate(LocalDate quoteDate) {
+	public void setQuoteDate(Date quoteDate) {
 		this.quoteDate = quoteDate;
 	}
 	public String getOrderNote() {
