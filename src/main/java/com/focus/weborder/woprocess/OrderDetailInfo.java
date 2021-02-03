@@ -27,25 +27,20 @@ public class OrderDetailInfo {
 	@Column(name="PRODUCT_CODE")
 	private String productCode;
 	
-	@Column(name="CO_NO")
 	private Long coNo;
-	@Column(name="CO_TGL")
 	private String coTgl;
-	@Column(name="CO_QTY")
 	private Long coQty;
+	private String coStatus;
 
-	@Column(name="ORDER_STATUS")
-	private String orderStatus;
-	
 	@Column(name="SO_NO")
 	private Long soNo;
 	@Column(name="SO_TGL")
 	private String soTgl;
 	@Column(name="SO_QTY")
 	private Long soQty;
+	private String soStatus;
 	
-	@Column(name="ORDER_DETAIL_STATUS")
-	private String orderDetailStatus;
+	private String soDetailStatus;
 	
 	@Column(name="DO_NO")
 	private String doNo;
@@ -96,6 +91,12 @@ public class OrderDetailInfo {
 	public void setProductCode(String productCode) {
 		this.productCode = productCode;
 	}
+	public String getCoStatus() {
+		return coStatus;
+	}
+	public void setCoStatus(String coStatus) {
+		this.coStatus = coStatus;
+	}
 	public Long getCoNo() {
 		return coNo;
 	}
@@ -114,15 +115,17 @@ public class OrderDetailInfo {
 	public void setCoQty(Long coQty) {
 		this.coQty = coQty;
 	}
-	public String getOrderStatus() {
-		return orderStatus;
+
+	public String getSoStatus() {
+		return soStatus;
 	}
-	public void setOrderStatus(String orderStatus) {
-		this.orderStatus = orderStatus;
+	public void setSoStatus(String soStatus) {
+		this.soStatus = soStatus;
 	}
 	public Long getSoNo() {
 		return soNo;
 	}
+	
 	public void setSoNo(Long soNo) {
 		this.soNo = soNo;
 	}
@@ -138,11 +141,11 @@ public class OrderDetailInfo {
 	public void setSoQty(Long soQty) {
 		this.soQty = soQty;
 	}
-	public String getOrderDetailStatus() {
-		return orderDetailStatus;
+	public String getSoDetailStatus() {
+		return soDetailStatus;
 	}
-	public void setOrderDetailStatus(String orderDetailStatus) {
-		this.orderDetailStatus = orderDetailStatus;
+	public void setSoDetailStatus(String soDetailStatus) {
+		this.soDetailStatus = soDetailStatus;
 	}
 	public String getDoNo() {
 		return doNo;

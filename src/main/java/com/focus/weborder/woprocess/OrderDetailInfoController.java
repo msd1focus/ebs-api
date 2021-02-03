@@ -18,21 +18,12 @@ public class OrderDetailInfoController {
 	
 	@RequestMapping("/orderinfo")
 	public List<OrderDetailInfo> getOrderInfo(@RequestParam String orderid) {
-		
-		
 		return orderDtlService.getByOrderId(orderid);
 	}
 
 	@RequestMapping("/orderinfobypo")
 	public List<OrderDetailInfo> getOrderInfoByPo(@RequestParam String poNo) {
-		
-		
 		return orderDtlRepo.findByCustPoNo(poNo);
 	}
-
-//	@RequestMapping("/orderdetailinfo")
-//	public OrderDetailInfo getOrderDetail (@RequestParam String orderdetailid){
-//		return orderDtlRepo.getOne(orderdetailid);
-//	}
 
 }
