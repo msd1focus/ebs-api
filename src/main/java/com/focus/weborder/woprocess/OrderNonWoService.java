@@ -49,7 +49,7 @@ public class OrderNonWoService {
 	}
 
 	public List<OrderDetailNonWo> getOrderDetailNonWo (Integer custId, String noPo) {
-		List<OrderDetailNonWo> orders = orderDetailNonWoRepo.findByNoPoOrderByCoNo(noPo);
+		List<OrderDetailNonWo> orders = orderDetailNonWoRepo.findByCustIdAndNoPoOrderByCoNo(custId, noPo);
 		return orders;
 	}
 }

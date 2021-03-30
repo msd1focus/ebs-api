@@ -11,4 +11,5 @@ import com.focus.weborder.woprocess.model.OrderDetailNonWo;
 public interface OrderDetailNonWoRepo extends JpaRepository<OrderDetailNonWo, String> {
 
 	public List<OrderDetailNonWo> findByNoPoOrderByCoNo (String noPo);
+	public List<OrderDetailNonWo> findByCustIdAndNoPoOrderByCoNo (Integer custId, String noPo);
 }

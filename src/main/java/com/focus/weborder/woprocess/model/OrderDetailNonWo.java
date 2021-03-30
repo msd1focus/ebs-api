@@ -29,6 +29,7 @@ public class OrderDetailNonWo {
 	@Column(name="CUST_PO_NO")
 	private String noPo;
 
+	private Integer custId;
 	private String productCode;
 	private String productName;
 	private String unit;
@@ -132,6 +133,12 @@ public class OrderDetailNonWo {
 	}
 	public void setTotal(Double total) {
 		this.total = total;
+	}
+	public Integer getCustId() {
+		return custId;
+	}
+	public void setCustId(Integer custId) {
+		this.custId = custId;
 	}
 	public Long getCoNo() {
 		return coNo;
