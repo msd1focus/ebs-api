@@ -7,6 +7,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.focus.weborder.woprocess.model.InvoicePo;
+import com.focus.weborder.woprocess.model.OrderDetailNonWo;
+import com.focus.weborder.woprocess.model.OrderHdrNonWo;
+import com.focus.weborder.woprocess.repository.InvoicePoRepo;
+import com.focus.weborder.woprocess.repository.OrderDetailNonWoRepo;
+import com.focus.weborder.woprocess.repository.OrderHdrNonWoRepo;
+
 @Service
 public class OrderNonWoService {
 
@@ -14,6 +21,8 @@ public class OrderNonWoService {
 	private OrderHdrNonWoRepo orderSumNonWoRepo;
 	@Autowired
 	private InvoicePoRepo invoicePoRepo;
+	@Autowired
+	private OrderDetailNonWoRepo orderDetailNonWoRepo;
 	
 	public List<OrderHdrNonWo> getOrderNonWo (Integer custId,
 												Date date1, Date date2) {
@@ -39,4 +48,8 @@ public class OrderNonWoService {
 
 	}
 
+	public List<OrderDetailNonWo> getOrderDetailNonWo (Integer custId, String noPo) {
+		List<OrderDetailNonWo> orders = orderDetailNonWoRepo.findByNoPoOrderByCoNo(noPo);
+		return orders;
+	}
 }

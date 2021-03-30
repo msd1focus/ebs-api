@@ -1,4 +1,4 @@
-package com.focus.weborder.woprocess;
+package com.focus.weborder.woprocess.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

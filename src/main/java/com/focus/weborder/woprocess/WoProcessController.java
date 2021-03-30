@@ -2,6 +2,7 @@ package com.focus.weborder.woprocess;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.focus.weborder.woprocess.model.OrderDetailInfo;
+import com.focus.weborder.woprocess.model.OrderDetailNonWo;
+import com.focus.weborder.woprocess.model.OrderHdrNonWo;
+import com.focus.weborder.woprocess.repository.OrderDetailInfoRepository;
 
 @RestController
 @RequestMapping("/rest")
@@ -52,4 +58,13 @@ public class WoProcessController {
 		return ordersNonWO;
 	}
 
+	@RequestMapping("/orderdetailnonwo")
+	public List<OrderDetailNonWo> getOrderDetailNonWo (@RequestParam String pCustId,
+														@RequestParam String noPo) {
+		Integer custId = Integer.valueOf(pCustId);
+
+		List<OrderDetailNonWo> orders = new ArrayList<>();
+		orders = orderNonWoService.getOrderDetailNonWo(custId, noPo);
+		return orders ;
+	}
 }

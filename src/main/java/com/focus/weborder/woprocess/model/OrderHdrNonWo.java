@@ -1,4 +1,4 @@
-package com.focus.weborder.woprocess;
+package com.focus.weborder.woprocess.model;
 
 import java.util.Date;
 import java.util.List;

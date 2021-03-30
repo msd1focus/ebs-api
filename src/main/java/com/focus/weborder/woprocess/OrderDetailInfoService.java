@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.focus.weborder.woprocess.model.OrderDetailInfo;
+import com.focus.weborder.woprocess.repository.OrderDetailInfoRepository;
+
 @Service
 public class OrderDetailInfoService {
 
