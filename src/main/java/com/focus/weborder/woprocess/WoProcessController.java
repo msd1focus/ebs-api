@@ -28,7 +28,7 @@ public class WoProcessController {
 
 	@RequestMapping("/orderinfobypo")
 	public List<OrderDetailInfo> getOrderInfoByPo(@RequestParam String poNo) {
-		return orderDtlRepo.findByCustPoNo(poNo);
+		return orderDtlRepo.findByCustPoNoOrderByCoNo(poNo);
 	}
 
 	@RequestMapping("/ordersummarynonwo")
