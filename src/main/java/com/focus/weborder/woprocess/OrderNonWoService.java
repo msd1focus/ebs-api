@@ -28,12 +28,10 @@ public class OrderNonWoService {
 												Date date1, Date date2) {
 		List<OrderHdrNonWo> orderHdrNonWoList = new ArrayList<>();
 		orderHdrNonWoList = orderSumNonWoRepo.findByCustomerIdAndTglPoBetween(custId, date1, date2);
-		System.out.println("Jumlah: " + orderHdrNonWoList.size());
+
 		while(orderHdrNonWoList.remove(null));
 		
 		for (OrderHdrNonWo orderHdr : orderHdrNonWoList) {
-			
-			System.out.println(orderHdr.getTglPo());
 			
 			List<InvoicePo> invoicePos = invoicePoRepo.findByCustPoNumberAndCustId(
 																	orderHdr.getCustPoNo(),

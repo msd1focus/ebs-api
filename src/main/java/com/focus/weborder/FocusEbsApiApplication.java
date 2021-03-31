@@ -6,18 +6,18 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class FocusWeborderOracleFdnApplication 
+public class FocusEbsApiApplication 
 	extends SpringBootServletInitializer
 	{
 
 	public static void main(String[] args) {
-		SpringApplication.run(FocusWeborderOracleFdnApplication.class, args);
+		SpringApplication.run(FocusEbsApiApplication.class, args);
 	}
 	
 	@Override
     protected SpringApplicationBuilder configure(
-    		SpringApplicationBuilder focusWeborderOracleFdnApplication) {
-        return focusWeborderOracleFdnApplication.sources(
-        		FocusWeborderOracleFdnApplication.class);
+    		SpringApplicationBuilder FocusEbsApiApplication) {
+        return FocusEbsApiApplication.sources(
+        		FocusEbsApiApplication.class);
     }
 }
