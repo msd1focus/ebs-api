@@ -11,7 +11,7 @@ import com.focus.weborder.woprocess.model.OrderHdrNonWo;
 @Repository
 public interface OrderHdrNonWoRepo extends JpaRepository<OrderHdrNonWo, String> {
 
-	public List<OrderHdrNonWo> findByCustomerIdAndTglPoBetween (Integer custId, Date date1, Date date2);
+	public List<OrderHdrNonWo> findByCustomerIdAndTglPoBetweenOrderByCustPoNoDesc (Integer custId, Date date1, Date date2);
 	public List<OrderHdrNonWo> findByCustomerId (Integer custId);
 	
 }
