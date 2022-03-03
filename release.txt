@@ -1,5 +1,0 @@
-Release 2.1.0
-
-* Tambah Entity OrderDetailNonWO
-* Tambah Entity OrderHdrNonWo
-* Tambah Entity InvoicePo
